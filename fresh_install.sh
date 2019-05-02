@@ -10,7 +10,7 @@ sudo apt-get upgrade
 sudo apt-get install r-base r-base-dev
 
 #-- Bibliotecas do Sistema
-sudo apt-get install openssl libcurl4 libcurl4-openssl-dev ssh htop default-jdk gdebi libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+sudo apt-get install libssl-dev openssl libcurl4 libcurl4-openssl-dev ssh htop default-jdk gdebi libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 xml2 libxml2-dev libtiff-dev libfftw3-dev
 
 ###################################### 
 # Softwares
@@ -46,7 +46,6 @@ sudo apt-get install nextcloud-client
 ###################################### 
 # Pacotes do R
 ###################################### 
-Rscript -e 'install.packages("BiocManager", repos="https://cran.rstudio.com")
-BiocManager::install("tidyverse", "tinytex", "caret", "RTN", "DESeq2", "TCGAbiolinks", "EBImage", "keras", "RedeR")'
-
+Rscript -e 'install.packages("BiocManager", lib = "~/R/x86_64-pc-linux-gnu-library/3.6", repos="https://cran.rstudio.com")
+BiocManager::install(c("tidyverse", "tinytex", "caret", "RTN", "DESeq2", "TCGAbiolinks", "EBImage", "keras", "RedeR"),  lib = "~/R/x86_64-pc-linux-gnu-library/3.6")'
 
