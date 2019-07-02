@@ -9,7 +9,8 @@ Freshinstall v. 1.0.0, feito para o Laboratório de Biologia de Sistemas e Bioin
 ```bash
 cd ~/Downloads/
 wget https://github.com/csgroen/freshinstall/archive/master.zip
-unzip master.zip .
+unzip master.zip
+cd freshinstall-master
 chmod +x fresh_install.sh
 ./fresh_install.sh
 ```
